@@ -80,7 +80,7 @@ int gethumanmove( const int *board) {
             continue;
 
         }
-        //if invalid format
+        //assigning userinput to move in decimal format and treating exception
         if (sscanf(userinput, "%d", &move) != 1) {
             move = -1;
             printf("Invalid sscanf()\n");
@@ -102,7 +102,7 @@ int gethumanmove( const int *board) {
         }
         moveOk = 1; //breaks the while loop
     }
-    printf("Making move....%d\n", (move+1));
+    printf("Making move....%d\n", (move++));
     return convertto25[move];
 }
 
